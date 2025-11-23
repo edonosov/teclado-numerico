@@ -1,0 +1,107 @@
+.numeros {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.pantalla {
+  font-size: 24px;
+  padding: 15px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  min-height: 30px;
+  max-width: 200px;
+  background-color: #f9f9f9;
+}
+
+.pantalla.par {
+  color: blue;
+  font-weight: bold;
+}
+
+.botones-numeros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.botones-operaciones {
+  margin-top: 15px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(237, 199, 230);
+}
+
+button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.btn-limpiar {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+}
+
+.btn-limpiar:hover:not(:disabled) {
+  background-color: #ff5252;
+}
+
+.botones-operaciones button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.btn-limpiar {
+  background-color: #ff6b6b;
+}
+
+.btn-aleatorio {
+  background-color: #ffa726;
+}
+
+.btn-sumar {
+  background-color: #66bb6a;
+}
+
+.btn-restar {
+  background-color: #42a5f5;
+}
+
+.resultado-factorial {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #7e57c2;
+  border-radius: 8px;
+  background-color: #f3e5f5;
+}
+
+.resultado-factorial h3 {
+  margin-top: 0;
+  color: #7e57c2;
+}
+
+.resultado-factorial p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5e35b1;
+}

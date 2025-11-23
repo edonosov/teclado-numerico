@@ -1,0 +1,68 @@
+<div class="numeros">
+  <h2>Teclado Numérico hecho por Emma</h2>
+  
+  <!-- Pantalla para mostrar el nume -->
+
+  <div [class.par]="esPar()" class="pantalla">
+    {{ numeroActual || '0' }}
+  </div>
+  
+  <!--Botones de los nums-->
+  <div class="botones-numeros">
+    <button (click)="agregarNumero(1)">1</button>
+    <button (click)="agregarNumero(2)">2</button>
+    <button (click)="agregarNumero(3)">3</button>
+    <button (click)="agregarNumero(4)">4</button>
+    <button (click)="agregarNumero(5)">5</button>
+    <button (click)="agregarNumero(6)">6</button>
+    <button (click)="agregarNumero(7)">7</button>
+    <button (click)="agregarNumero(8)">8</button>
+    <button (click)="agregarNumero(9)">9</button>
+    <button (click)="agregarNumero(0)">0</button>
+  </div>
+  <div class="botones-operaciones">
+
+    <!--Botón Limpiar, solo habilitado cuando hay numros, ni no hay no se puede dar click-->
+    <button 
+      (click)="limpiar()" 
+      [disabled]="!numeroActual"
+      class="btn-limpiar">
+      Limpiar
+    </button>
+    <!--Botón aleatorio-->
+    <br> <br>
+     <button 
+      (click)="generarAleatorio()" 
+      [disabled]="numeroActual"
+      class="text-warning">
+      Número aleatorio
+    </button>
+<br><br>
+    <!--Botones Sumar 1 y Restar 1-->
+    <button 
+      (click)="sumarUno()" 
+      [disabled]="!numeroActual"
+      class="btn-sumar">
+      Sumar 1
+    </button>
+    <br><br>
+    <button 
+      (click)="restarUno()" 
+      [disabled]="!numeroActual || getNumeroActual() === 0"
+      class="btn-restar">
+      Restar 1
+    </button> <br> <br>
+<!--Factorial calcular, sin ser clase hijo-->
+    <button (click)="calcularFactorial()" [disabled]="!numeroActual || getNumeroActual() < 0" class="btn-factorial">Factorial</button>
+  </div>
+
+  <!-- Resultado del factorial, aunque no funciona..  hola-->
+  <div class="resultado-factorial" *ngIf="mostrarFactorial">
+    <h3>Factorial de {{ getNumeroActual() }}</h3>
+    <p>{{ getNumeroActual() }}! = {{ resultadoFactorial }}</p>
+  </div>
+</div>
+
+<br><br>
+<img src="https://i.pinimg.com/474x/a9/aa/cc/a9aaccb7924ba5df2d1074323a098d34.jpg">
+
