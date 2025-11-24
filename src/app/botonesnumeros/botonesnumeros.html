@@ -52,11 +52,14 @@
       class="btn-restar">
       Restar 1
     </button> <br> <br>
-<!--Factorial calcular, sin ser clase hijo-->
+
+    
+
+<!--Factorial calcular-->
     <button (click)="calcularFactorial()" [disabled]="!numeroActual || getNumeroActual() < 0" class="btn-factorial">Factorial</button>
   </div>
 
-  <!-- Resultado del factorial, aunque no funciona..  hola-->
+  <!-- Resultado del factorial, aunque no funciona..  -->
   <div class="resultado-factorial" *ngIf="mostrarFactorial">
     <h3>Factorial de {{ getNumeroActual() }}</h3>
     <p>{{ getNumeroActual() }}! = {{ resultadoFactorial }}</p>

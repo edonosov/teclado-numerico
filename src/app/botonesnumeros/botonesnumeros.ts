@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './botonesnumeros.html',
   styleUrl: './botonesnumeros.css'
 })
-export class BotonesnumerosComponent {
+export class BotonesnumerosComponente {
   numeroActual: string = ''
    mostrarFactorial: boolean = false;
   resultadoFactorial: number = 0;
@@ -31,7 +31,7 @@ export class BotonesnumerosComponent {
   }
 
   getNumeroActual(): number {
-    if (this.numeroActual === '') return 0;
+    if (this.numeroActual === '0') return 0;
     return parseInt(this.numeroActual);
   }
 
